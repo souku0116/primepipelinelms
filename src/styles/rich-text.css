@@ -1,0 +1,25 @@
+@layer components {
+  .rich-text {
+    @apply text-slate-700 leading-relaxed;
+  }
+
+  .rich-text p + p {
+    @apply mt-4;
+  }
+
+  .rich-text ul {
+    @apply list-disc pl-6 space-y-2;
+  }
+
+  .rich-text ol {
+    @apply list-decimal pl-6 space-y-2;
+  }
+
+  .rich-text strong {
+    @apply font-semibold text-slate-900;
+  }
+
+  .rich-text a {
+    @apply text-blue-700 hover:text-blue-800 font-medium;
+  }
+}
