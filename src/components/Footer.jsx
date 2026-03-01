@@ -4,14 +4,12 @@ import { Mail, MapPin, Phone } from "lucide-react";
 const QUICK_LINKS = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/team", label: "Team" },
   { to: "/services", label: "Services" },
   { to: "/contact", label: "Contact" },
 ];
 
 const SERVICE_LINKS = [
   { to: "/coaching", label: "Coaching" },
-  { to: "/learning-support", label: "Learning Support" },
   { to: "/college-placement", label: "College Placement" },
   { to: "/assessment", label: "Assessment" },
   { to: "/counseling", label: "Counseling" },

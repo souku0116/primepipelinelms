@@ -6,20 +6,16 @@ import { ChevronDown, Menu, X } from "lucide-react";
 const MAIN_LINKS = [
   { to: "/", label: "Home", end: true },
   { to: "/about", label: "About" },
-  { to: "/team", label: "Team" },
   { to: "/contact", label: "Contact" },
 ];
 
 const SERVICE_LINKS = [
   { to: "/services", label: "All Services" },
   { to: "/coaching", label: "Coaching" },
-  { to: "/learning-support", label: "Learning Support" },
   { to: "/ell", label: "English Language Learners" },
   { to: "/leave-services", label: "Leave Services" },
   { to: "/college-placement", label: "College Placement" },
-  { to: "/gifted-talented", label: "Gifted & Talented" },
   { to: "/advocacy", label: "Advocacy" },
-  { to: "/international-school", label: "International School" },
   { to: "/assessment", label: "Assessment" },
   { to: "/counseling", label: "Counseling" },
   { to: "/group-classes", label: "Group Classes" },
@@ -111,10 +107,10 @@ export default function Header() {
             </NavLink>
 
             <Link
-              to="/contact"
+              to="/login"
               className="inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 transition-all shadow-md hover:shadow-lg"
             >
-              Get Started
+              Portal Login
             </Link>
           </div>
 
@@ -184,11 +180,11 @@ export default function Header() {
 
             <div className="pt-2">
               <Link
-                to="/contact"
+                to="/login"
                 onClick={closeMobile}
                 className="block w-full text-center mt-2 px-5 py-3 rounded-md text-base font-semibold text-white bg-blue-700 hover:bg-blue-800"
               >
-                Get Started
+                Portal Login
               </Link>
             </div>
           </div>

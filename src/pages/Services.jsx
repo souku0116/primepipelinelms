@@ -12,13 +12,6 @@ const services = [
     icon: "🎯",
   },
   {
-    title: "Learning & Behaviour Support",
-    description:
-      "Specialized support for students with learning differences, ADHD, autism spectrum disorders, and behavioral challenges.",
-    to: "/learning-support",
-    icon: "📚",
-  },
-  {
     title: "English Language Learners (ELL)",
     description: "Support for non-native English speakers to develop language proficiency and academic skills.",
     to: "/ell",
@@ -38,23 +31,11 @@ const services = [
     icon: "🎓",
   },
   {
-    title: "Gifted & Talented Enrichment",
-    description: "Advanced educational opportunities for high-ability students to challenge and engage their minds.",
-    to: "/gifted-talented",
-    icon: "⭐",
-  },
-  {
     title: "Special Education Advocacy",
     description:
       "Expert advocacy services to help families navigate the special education system and secure appropriate services.",
     to: "/advocacy",
     icon: "🛡️",
-  },
-  {
-    title: "International School Placement",
-    description: "Guidance for families seeking placement in international schools worldwide.",
-    to: "/international-school",
-    icon: "🌐",
   },
   {
     title: "Psychological Assessment",

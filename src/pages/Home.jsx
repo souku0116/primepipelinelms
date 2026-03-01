@@ -11,12 +11,6 @@ const featuredServices = [
     icon: "🎯",
   },
   {
-    title: "Learning Support",
-    description: "Specialized support for students with learning differences and behavioral challenges.",
-    to: "/learning-support",
-    icon: "📚",
-  },
-  {
     title: "College Placement",
     description: "Expert guidance through the college application process and university placement services.",
     to: "/college-placement",
@@ -48,8 +42,8 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
-              <ButtonLink to="/contact" variant="light" size="lg">
-                Get Started
+              <ButtonLink to="/login" variant="light" size="lg">
+                Portal Login
               </ButtonLink>
               <ButtonLink to="/services" variant="outlineOnDark" size="lg">
                 Explore Services
