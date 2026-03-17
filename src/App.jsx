@@ -19,11 +19,6 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Portal from "./pages/Portal";
 
-import supabase from "./services/supabaseClient";
-
-// Expose supabase globally for easier access in components
-window.supabase = supabase;
-
 function App() {
   return (
     <AuthProvider>

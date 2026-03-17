@@ -8,7 +8,7 @@ const supabaseAnonKey =
 if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error(
     'Missing Supabase env vars. Set VITE_SUPABASE_URL/VITE_SUPABASE_ANON_KEY ' +
-      'or NEXT_PUBLIC_SUPABASE_URL/NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY in .env.local.',
+      'or NEXT_PUBLIC_SUPABASE_URL/NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY in local.env',
   );
 }
 

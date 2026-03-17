@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import supabase from '../services/supabaseClient';
 import { getCurrentUser, onAuthStateChange, signOut as authSignOut } from '../services/authService';
 
 const AuthContext = createContext(null);
@@ -16,7 +17,7 @@ export function AuthProvider({ children }) {
         if (currentUser) {
           setUser(currentUser);
           // Fetch user profile from profiles table
-          const { data } = await window.supabase
+          const { data } = await supabase
             .from('profiles')
             .select('*')
             .eq('id', currentUser.id)
@@ -39,7 +40,7 @@ export function AuthProvider({ children }) {
       if (session?.user) {
         setUser(session.user);
         // Fetch user profile
-        const { data } = await window.supabase
+        const { data } = await supabase
           .from('profiles')
           .select('*')
           .eq('id', session.user.id)
