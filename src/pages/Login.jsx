@@ -39,14 +39,26 @@ export default function Login() {
     setLoading(true);
 
     try {
+      console.log('Login attempt:', { email, selectedRole });
       const { user } = await signIn(email, password);
+      console.log('SignIn success:', user.id);
       
-      // Get user profile to check role
-      const { data: profile } = await window.supabase
+      // Get user profile to check role - with timeout/debug
+      console.log('Fetching profile for:', user.id);
+      const { data: profile, error: profileError } = await window.supabase
         .from('profiles')
         .select('role')
         .eq('id', user.id)
         .single();
+
+      console.log('Profile response:', { profile, profileError });
+      
+      if (profileError) {
+        console.error('Profile error:', profileError);
+        setError(`Profile error: ${profileError.message}`);
+        setLoading(false);
+        return;
+      }
 
       if (!profile) {
         setError("Profile not found. Please contact administrator.");
@@ -54,6 +66,8 @@ export default function Login() {
         return;
       }
 
+      console.log('Profile role:', profile.role, 'Selected:', selectedRole);
+      
       // Check if role matches selected role
       if (profile.role !== selectedRole) {
         setError(`This account is not registered as a ${selectedRole}. Please select the correct role.`);
@@ -61,9 +75,11 @@ export default function Login() {
         return;
       }
 
+      console.log('Role match - navigating to /portal');
       // Navigate to portal
       navigate("/portal");
     } catch (err) {
+      console.error('Login error:', err);
       setError(err.message || "Invalid email or password");
     } finally {
       setLoading(false);
